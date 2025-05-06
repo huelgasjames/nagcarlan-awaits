@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Local Delicacies - Nagcarlan Awaits</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="food-styles.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1>Nagcarlan Awaits</h1>
+      <button class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav id="mainNav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="attraction.html">Attractions</a></li>
+          <li><a href="food-index.html" class="active">Food</a></li>
+          <li><a href="accommodations.html">Stay</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html"><i class="fas fa-user"></i> Logout</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="food-hero">
+    <div class="food-hero-content">
+      <h1>Taste of Nagcarlan</h1>
+      <p>Discover the authentic flavors and culinary specialties that make Nagcarlan a food lover's paradise.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="food-categories">
+        <button class="category-btn active">All</button>
+        <button class="category-btn">Sweet Treats</button>
+        <button class="category-btn">Savory Dishes</button>
+        <button class="category-btn">Local Drinks</button>
+        <button class="category-btn">Festival Specials</button>
+      </div>
+
+      <div class="food-grid">
+        <!-- Delicacy 1 -->
+        <div class="food-card">
+          <div class="food-img-container">
+            <img src="  pinaltok.jpg" alt="Pinaltok" />
+          </div>
+          <div class="food-content">
+            <div class="food-tags">
+              <span class="food-tag">Sweet Treat</span>
+              <span class="food-tag">Traditional</span>
+            </div>
+            <h3>Pinaltok</h3>
+            <p>A beloved sweet delicacy made from glutinous rice balls filled with sweet coconut and muscovado sugar, then wrapped in banana leaves and steamed to perfection. This traditional dessert has been passed down through generations of Nagcarlan families.</p>
+          </div>
+        </div>
+
+        <!-- Delicacy 2 -->
+        <div class="food-card">
+          <div class="food-img-container">
+            <img src="lomi.jpg" alt="Lomi" />
+          </div>
+          <div class="food-content">
+            <div class="food-tags">
+              <span class="food-tag">Savory Dish</span>
+              <span class="food-tag">Comfort Food</span>
+            </div>
+            <h3>Special Lomi</h3>
+            <p>A hearty noodle soup featuring thick, fresh egg noodles in a rich savory broth loaded with pork, liver, vegetables, and quail eggs. Nagcarlan's version is distinctly thicker and more flavorful than others in the region.</p>
+          </div>
+        </div>
+
+        <!-- Delicacy 3 -->
+        <div class="food-card">
+          <div class="food-img-container">
+            <img src="bibingka.jpg" alt="Bibingka" />
+          </div>
+          <div class="food-content">
+            <div class="food-tags">
+              <span class="food-tag">Sweet Treat</span>
+              <span class="food-tag">Festival Special</span>
+            </div>
+            <h3>Bibingka</h3>
+            <p>A traditional rice cake made with ground rice and coconut milk, cooked in clay pots lined with banana leaves. Nagcarlan's version is topped with a generous amount of salted egg, cheese, and grated coconut for a perfect blend of sweet and savory.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="restaurant-section">
+    <div class="container">
+      <div class="restaurant-heading">
+        <h2>Where to Eat in Nagcarlan</h2>
+        <p>Discover the best local eateries and restaurants serving authentic Nagcarlan cuisine</p>
+      </div>
+      <div class="restaurant-list">
+        <!-- Restaurant 1 -->
+        <div class="restaurant-card">
+          <div class="restaurant-img">
+            <img src="kainan-batis.jpg" alt="Kainan sa Batis" />
+          </div>
+          <div class="restaurant-info">
+            <h4>Kainan sa Batis</h4>
+            <div class="restaurant-location">
+              <i class="fas fa-map-marker-alt"></i> Near Bunga Falls
+            </div>
+            <div class="restaurant-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p>Famous for traditional Filipino dishes served beside a flowing river.</p>
+          </div>
+        </div>
+
+        <!-- Restaurant 2 -->
+        <div class="restaurant-card">
+          <div class="restaurant-img">
+            <img src="kakanin.jpg" alt="Lola Ising's Kakanin" />
+          </div>
+          <div class="restaurant-info">
+            <h4>Lola Ising's Kakanin</h4>
+            <div class="restaurant-location">
+              <i class="fas fa-map-marker-alt"></i> Town Proper
+            </div>
+            <div class="restaurant-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p>The best place for authentic local desserts and rice cakes.</p>
+          </div>
+        </div>
+
+        <!-- Restaurant 3 -->
+        <div class="restaurant-card">
+          <div class="restaurant-img">
+            <img src="lomi.jpg" alt="Kuya Pedro's Lomi House" />
+          </div>
+          <div class="restaurant-info">
+            <h4>Kuya Pedro's Lomi House</h4>
+            <div class="restaurant-location">
+              <i class="fas fa-map-marker-alt"></i> San Francisco Road
+            </div>
+            <div class="restaurant-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <p>Home of the famous extra thick and creamy Nagcarlan lomi.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About Us</h3>
+          <p>Nagcarlan Tourism Office is dedicated to promoting the rich heritage, natural beauty, and cultural experiences of Nagcarlan, Laguna.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="attraction.html">Attractions</a></li>
+            <li><a href="food-index.html">Food</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Information</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Municipal Tourism Office, Nagcarlan, Laguna</p>
+          <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+          <p><i class="fas fa-envelope"></i> info@nagcarlan.gov.ph</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="copy-right">
+        <p>&copy; 2025 Nagcarlan Tourism. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+    
+    menuToggle.addEventListener('click', () => {
+      mainNav.classList.toggle('active');
+      menuToggle.innerHTML = mainNav.classList.contains('active') 
+        ? '<i class="fas fa-times"></i>' 
+        : '<i class="fas fa-bars"></i>';
+    });
+    
+    // Close menu on scroll (both up and down)
+    let lastScrollTop = 0;
+    window.addEventListener('scroll', function() {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      
+      // If we're scrolling in any direction and menu is open, close it
+      if (mainNav.classList.contains('active')) {
+        mainNav.classList.remove('active');
+        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+      }
+      
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    }, false);
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 70,
+            behavior: 'smooth'
+          });
+          
+          // Update active link
+          document.querySelectorAll('nav a').forEach(link => {
+            link.classList.remove('active');
+          });
+          this.classList.add('active');
+          
+          // Close mobile menu if open
+          if (mainNav.classList.contains('active')) {
+            mainNav.classList.remove('active');
+            menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+          }
+        }
+      });
+    });
+    
+    // Scroll animations
+    const sections = document.querySelectorAll('.section');
+    
+    const observerOptions = {
+      threshold: 0.2
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+    
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+    
+    // Update active menu item on scroll
+    window.addEventListener('scroll', () => {
+      let current = '';
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        const sectionHeight = section.clientHeight;
+        
+        if (pageYOffset >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+      
+      document.querySelectorAll('nav a').forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        } else if (current === '' && link.getAttribute('href') === '#home') {
+          link.classList.add('active');
+        }
+      });
+    });
+    
+    // Form submission (for demo purposes)
+    const contactForm = document.querySelector('#contact form');
+    
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Create success message element
+      const successMessage = document.createElement('div');
+      successMessage.style = `
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #4CAF50;
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 5px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        z-index: 1000;
+        opacity: 0;
+        transition: all 0.5s ease;
+      `;
+      successMessage.innerHTML = '<i class="fas fa-check-circle"></i> Message sent successfully! We\'ll be in touch soon.';
+      
+      document.body.appendChild(successMessage);
+      
+      // Show the message with animation
+      setTimeout(() => {
+        successMessage.style.opacity = '1';
+        successMessage.style.transform = 'translateX(-50%) translateY(10px)';
+      }, 10);
+      
+      // Remove message after delay
+      setTimeout(() => {
+        successMessage.style.opacity = '0';
+        successMessage.style.transform = 'translateX(-50%) translateY(-20px)';
+        
+        setTimeout(() => {
+          document.body.removeChild(successMessage);
+        }, 500);
+        
+        // Reset form
+        contactForm.reset();
+      }, 3000);
+    });
+      </script>
+</body>
+
+</html>

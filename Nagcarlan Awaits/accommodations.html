@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accommodations - Nagcarlan Awaits</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="accmmodations.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1>Nagcarlan Awaits</h1>
+      <button class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav id="mainNav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="attraction.html">Attractions</a></li>
+          <li><a href="food-index.html">Food</a></li>
+          <li><a href="accommodations.html" class="active">Stay</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html"><i class="fas fa-user"></i> Log out</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="accommodation-hero">
+    <div class="accommodation-hero-content">
+      <h1>Where to Stay in Nagcarlan</h1>
+      <p>Find the perfect accommodation for your Nagcarlan adventure, from cozy homestays to eco-resorts.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="accommodation-filters">
+        <button class="filter-btn active">All</button>
+        <button class="filter-btn">Hotels</button>
+        <button class="filter-btn">Resorts</button>
+        <button class="filter-btn">Homestays</button>
+        <button class="filter-btn">Farm Stays</button>
+      </div>
+
+      <div class="price-range">
+        <label for="priceRange">Price Range:</label>
+        <input type="range" id="priceRange" min="1000" max="10000" step="500" value="5000">
+        <span class="price-value">₱5,000</span>
+      </div>
+
+      <div class="accommodations-grid">
+        <!-- Accommodation 1 -->
+        <div class="accommodation-card">
+          <div class="accommodation-img-container">
+            <img src="Banahaw.jpg" alt="Banahaw Nature Resort" />
+            <div class="accommodation-badge popular">Popular</div>
+          </div>
+          <div class="accommodation-content">
+            <h3>Banahaw Nature Resort</h3>
+            <div class="accommodation-meta">
+              <div class="accommodation-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <div class="accommodation-price">₱4,500 / night</div>
+            </div>
+            <div class="accommodation-features">
+              <span class="accommodation-feature"><i class="fas fa-wifi"></i> Free WiFi</span>
+              <span class="accommodation-feature"><i class="fas fa-swimming-pool"></i> Pool</span>
+              <span class="accommodation-feature"><i class="fas fa-utensils"></i> Restaurant</span>
+            </div>
+            <p class="accommodation-description">A serene eco-resort nestled at the foot of Mount Banahaw offering comfortable rooms with spectacular mountain views. Enjoy their natural spring pool and fresh farm-to-table dining.</p>
+            <div class="accommodation-buttons">
+              <a href="#" class="view-btn primary">View Details</a>
+              <a href="#" class="view-btn secondary">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accommodation 2 -->
+        <div class="accommodation-card">
+          <div class="accommodation-img-container">
+            <img src="Villa-Cecilia.jpeg" alt="Villa Cecilia" />
+            <div class="accommodation-badge new">New</div>
+          </div>
+          <div class="accommodation-content">
+            <h3>Villa Cecilia Heritage House</h3>
+            <div class="accommodation-meta">
+              <div class="accommodation-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+              <div class="accommodation-price">₱6,500 / night</div>
+            </div>
+            <div class="accommodation-features">
+              <span class="accommodation-feature"><i class="fas fa-wifi"></i> Free WiFi</span>
+              <span class="accommodation-feature"><i class="fas fa-history"></i> Historic</span>
+              <span class="accommodation-feature"><i class="fas fa-coffee"></i> Breakfast</span>
+            </div>
+            <p class="accommodation-description">Experience the charm of a restored Spanish colonial house in the heart of Nagcarlan. Each room features antique furniture and modern amenities for a perfect blend of history and comfort.</p>
+            <div class="accommodation-buttons">
+              <a href="#" class="view-btn primary">View Details</a>
+              <a href="#" class="view-btn secondary">Book Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Accommodation 3 -->
+        <div class="accommodation-card">
+          <div class="accommodation-img-container">
+            <img src="bunga-falls.jpg" alt="Bunga Falls Homestay" />
+            <div class="accommodation-badge deal">Special Deal</div>
+          </div>
+          <div class="accommodation-content">
+            <h3>Bunga Falls Homestay</h3>
+            <div class="accommodation-meta">
+              <div class="accommodation-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <div class="accommodation-price">₱2,800 / night</div>
+            </div>
+            <div class="accommodation-features">
+              <span class="accommodation-feature"><i class="fas fa-wifi"></i> Free WiFi</span>
+              <span class="accommodation-feature"><i class="fas fa-utensils"></i> Meals</span>
+              <span class="accommodation-feature"><i class="fas fa-hiking"></i> Tours</span>
+            </div>
+            <p class="accommodation-description">A charming family-run homestay just 10 minutes walk from Bunga Falls. Experience authentic Filipino hospitality, home-cooked meals, and personalized waterfall tours from local guides.</p>
+            <div class="accommodation-buttons">
+              <a href="#" class="view-btn primary">View Details</a>
+              <a href="#" class="view-btn secondary">Book Now</a>
+            </div>
+          </div>
+        </div>
+  </section>
+
+  <section class="map-section">
+    <div class="container">
+      <h2>Find Accommodations</h2>
+      <div class="map-container">
+        <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d123804.65128023682!2d121.32879858697825!3d14.142249477366892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd5a275e3d55af%3A0x333533da68aa2620!2sNagcarlan%2C%20Laguna!5e0!3m2!1sen!2sph!4v1746536471003!5m2!1sen!2sph"
+        width="100%"
+        height="100%"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="book-direct">
+        <h3><i class="fas fa-tags"></i> Book Direct & Save!</h3>
+        <p>Contact our accommodations directly to get the best rates and special packages. Our local tourism office can also help you find the perfect place to stay!</p>
+        <a href="contact.html" class="btn">Contact Tourism Office</a>
+      </div>
+
+      <div class="testimonials">
+        <h2>Guest Reviews</h2>
+        <div class="testimonial-slider">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">
+                <img src="accomodation-profile-icon.jpg" alt="Sarah M." />
+              </div>
+              <div class="testimonial-info">
+                <h4>Sarah M.</h4>
+                <div class="testimonial-location">from Manila</div>
+              </div>
+            </div>
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">"Our stay at Bunga Falls Homestay was the highlight of our trip. The family was incredibly welcoming, and the breakfast with fresh fruits from their garden was amazing! The waterfall is just a short walk away."</p>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">
+                <img src="accomodation-profile-icon.jpg" alt="David L." />
+              </div>
+              <div class="testimonial-info">
+                <h4>David L.</h4>
+                <div class="testimonial-location">from Singapore</div>
+              </div>
+            </div>
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="testimonial-text">"Villa Cecilia transported us back in time with its beautiful Spanish colonial architecture, yet had all the modern comforts we needed. The staff shared fascinating stories about the house's history."</p>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-slide">
+            <div class="testimonial-header">
+              <div class="testimonial-avatar">
+                <img src="accomodation-profile-icon.jpg" alt="Maria T." />
+              </div>
+              <div class="testimonial-info">
+                <h4>Maria T.</h4>
+                <div class="testimonial-location">from Cebu</div>
+              </div>
+            </div>
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <p class="testimonial-text">"from Bunga Falls it was perfect for our family vacation. The kids loved feeding the animals and picking vegetables, while we enjoyed the peace and quiet of countryside living. Highly recommended!"</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About Us</h3>
+          <p>Nagcarlan Tourism Office is dedicated to promoting the rich heritage, natural beauty, and cultural experiences of Nagcarlan, Laguna.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="attraction.html">Attractions</a></li>
+            <li><a href="food-index.html">Food</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Information</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Municipal Tourism Office, Nagcarlan, Laguna</p>
+          <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+          <p><i class="fas fa-envelope"></i> info@nagcarlan.gov.ph</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="copy-right">
+        <p>&copy; 2025 Nagcarlan Tourism. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+    
+    menuToggle.addEventListener('click', () => {
+      mainNav.classList.toggle('active');
+      menuToggle.innerHTML = mainNav.classList.contains('active') 
+        ? '<i class="fas fa-times"></i>' 
+        : '<i class="fas fa-bars"></i>';
+    });
+    // Close menu on scroll (both up and down)
+let lastScrollTop = 0;
+window.addEventListener('scroll', function() {
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  
+  // If we're scrolling in any direction and menu is open, close it
+  if (mainNav.classList.contains('active')) {
+    mainNav.classList.remove('active');
+    menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+  }
+  
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+}, false);
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    
+    const targetId = this.getAttribute('href');
+    const targetElement = document.querySelector(targetId);
+    
+    if (targetElement) {
+      window.scrollTo({
+        top: targetElement.offsetTop - 70,
+        behavior: 'smooth'
+      });
+      
+      // Update active link
+      document.querySelectorAll('nav a').forEach(link => {
+        link.classList.remove('active');
+      });
+      this.classList.add('active');
+      
+      // Close mobile menu if open
+      if (mainNav.classList.contains('active')) {
+        mainNav.classList.remove('active');
+        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+      }
+    }
+  });
+});
+
+
+    // Price range slider
+    const priceRange = document.getElementById('priceRange');
+    const priceValue = document.querySelector('.price-value');
+    
+    priceRange.addEventListener('input', () => {
+      priceValue.textContent = `₱${priceRange.value}`;
+    });
+
+    // Filter buttons
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        
+        // Add active class to clicked button
+        button.classList.add('active');
+        
+        // Here you would normally filter the accommodation items
+        // For demo purposes, we'll just add a notification
+        const filter = button.textContent;
+        
+        if (filter !== 'All') {
+          // Create notification
+          const notification = document.createElement('div');
+          notification.style = `
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #558b2f;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            opacity: 0;
+            transition: all 0.5s ease;
+          `;
+          notification.innerHTML = `Filtering for: ${filter}`;
+          
+          document.body.appendChild(notification);
+          
+          // Show the notification
+          setTimeout(() => {
+            notification.style.opacity = '1';
+            notification.style.transform = 'translateY(-10px)';
+          }, 10);
+          
+          // Remove notification after delay
+          setTimeout(() => {
+            notification.style.opacity = '0';
+            notification.style.transform = 'translateY(10px)';
+            
+            setTimeout(() => {
+              document.body.removeChild(notification);
+            }, 500);
+          }, 2000);
+        }
+      });
+    });
+    
+    // Scroll animations
+    const sections = document.querySelectorAll('.section');
+    
+    const observerOptions = {
+      threshold: 0.2
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+    
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+
+    const images = [
+    "banahaw.jpg",
+    "Villa-Cecilia.jpeg",
+    "bunga-falls.jpg"
+  ]; // Replace with actual paths
+
+  let current = 0;
+  const hero = document.querySelector(".accommodation-hero");
+
+  function updateHeroBackground() {
+    hero.style.backgroundImage =
+      `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('${images[current]}')`;
+    current = (current + 1) % images.length;
+  }
+
+  updateHeroBackground(); // initial load
+  setInterval(updateHeroBackground, 5000);
+  </script>
+</body>
+
+</html>

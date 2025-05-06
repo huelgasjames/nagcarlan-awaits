@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login & Register | Nagcarlan Awaits</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      display: flex;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+    }
+    
+    .login-container {
+      display: flex;
+      width: 100%;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      height: 100%;
+    }
+    
+    /* Modified: Changed flex value to make image smaller */
+    .login-left {
+      flex: 0.4;
+      background: url('login-main.jpg') no-repeat center center;
+      background-size: cover;
+      position: relative;
+    }
+    
+    .login-left::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(76, 175, 80, 0.5) 0%, rgba(33, 150, 243, 0.3) 100%);
+    }
+    
+    /* Modified: Changed flex value to make form larger */
+    .login-right {
+      flex: 0.6;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 3rem;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    
+    .logo-container {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    
+    .logo-container img {
+      max-width: 150px;
+      margin-bottom: 1rem;
+      transition: all 0.3s ease;
+    }
+    
+    .logo-container h2 {
+      color: #333;
+      font-weight: 500;
+      margin: 0;
+      font-size: 1.8rem;
+    }
+    
+    .tabs {
+      display: flex;
+      margin-bottom: 2rem;
+      position: relative;
+      width: 100%;
+      max-width: 300px;
+      border-radius: 50px;
+      background-color: #f0f0f0;
+      padding: 0.3rem;
+      overflow: hidden;
+    }
+    
+    .tab-indicator {
+      position: absolute;
+      height: calc(100% - 6px);
+      width: calc(50% - 6px);
+      background: linear-gradient(135deg, #4CAF50, #3f9c42);
+      border-radius: 50px;
+      transition: transform 0.3s ease;
+      top: 3px;
+      left: 3px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 0;
+    }
+    
+    .tabs button {
+      flex: 1;
+      padding: 0.7rem 0;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 0.9rem;
+      z-index: 1;
+      transition: all 0.3s ease;
+      color: #777;
+      position: relative;
+    }
+    
+    .tabs button.active {
+      color: white;
+    }
+    
+    /* Modified: Increased max-width and height for larger form */
+    .form-container {
+      width: 100%;
+      max-width: 350px;
+      position: relative;
+      height: 180px;
+    }
+    
+    .form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      opacity: 0;
+      transform: translateX(50px);
+      transition: all 0.3s ease;
+      pointer-events: none;
+    }
+    
+    .form.active {
+      opacity: 1;
+      transform: translateX(0);
+      pointer-events: all;
+    }
+    
+    .form-control {
+      position: relative;
+      margin-bottom: 1.5rem;
+    }
+    
+    .form-control i {
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+      color: #aaa;
+    }
+    
+    .form input {
+      width: 100%;
+      padding: 0.8rem 1rem 0.8rem 2.5rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      box-sizing: border-box;
+    }
+    
+    .form input:focus {
+      border-color: #4CAF50;
+      box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+      outline: none;
+    }
+    
+    .form button {
+      background: linear-gradient(135deg, #4CAF50, #3f9c42);
+      color: white;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      margin-top: 0.5rem;
+    }
+    
+    .form button:hover {
+      background: linear-gradient(135deg, #3f9c42, #357a38);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Added: Forgot password link styling */
+    .forgot-password {
+      text-align: right;
+      width: 100%;
+      margin-top: -1rem;
+      margin-bottom: 1rem;
+    }
+    
+    .forgot-password a {
+      color: #4CAF50;
+      font-size: 0.8rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    
+    .forgot-password a:hover {
+      color: #3f9c42;
+      text-decoration: underline;
+    }
+    
+    @media (max-width: 768px) {
+      .login-container {
+        flex-direction: column;
+      }
+      
+      .login-left {
+        /* Hide the image completely on mobile */
+        display: none;
+      }
+      
+      .login-right {
+        flex: 1;
+        padding: 2rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="login-container">
+    <div class="login-left"></div>
+    <div class="login-right">
+      <div class="logo-container">
+        <img src="nagcarlan.png" alt="Nagcarlan Logo">
+        <h2>Nagcarlan Awaits</h2>
+      </div>
+
+      <div class="tabs">
+        <div class="tab-indicator"></div>
+        <button id="login-tab" class="active">Login</button>
+        <button id="register-tab">Register</button>
+      </div>
+
+      <div class="form-container">
+        <form id="login-form" class="form active">
+          <div class="form-control">
+            <i class="fas fa-user"></i>
+            <input type="text" id="login-username" placeholder="Username" required>
+          </div>
+          <div class="form-control">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="login-password" placeholder="Password" required>
+          </div>
+          <div class="forgot-password">
+            <a href="forgot-password.html">Forgot password?</a>
+          </div>
+          <button type="submit">Login</button>
+        </form>
+
+        <form id="register-form" class="form">
+          <div class="form-control">
+            <i class="fas fa-user"></i>
+            <input type="text" id="register-username" placeholder="Username" required>
+          </div>
+          <div class="form-control">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="register-password" placeholder="Password" required>
+          </div>
+          <button type="submit">Register</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const loginTab = document.getElementById("login-tab");
+    const registerTab = document.getElementById("register-tab");
+    const loginForm = document.getElementById("login-form");
+    const registerForm = document.getElementById("register-form");
+    const tabIndicator = document.querySelector(".tab-indicator");
+
+    loginTab.addEventListener("click", () => {
+      switchTab('login');
+    });
+
+    registerTab.addEventListener("click", () => {
+      switchTab('register');
+    });
+
+    function switchTab(tab) {
+      if (tab === 'login') {
+        loginTab.classList.add("active");
+        registerTab.classList.remove("active");
+        loginForm.classList.add("active");
+        registerForm.classList.remove("active");
+        tabIndicator.style.transform = "translateX(0)";
+      } else {
+        registerTab.classList.add("active");
+        loginTab.classList.remove("active");
+        registerForm.classList.add("active");
+        loginForm.classList.remove("active");
+        tabIndicator.style.transform = "translateX(100%)";
+      }
+    }
+
+    registerForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const username = document.getElementById("register-username").value;
+      const password = document.getElementById("register-password").value;
+      
+      if (!username || !password) {
+        alert("Please fill in all fields");
+        return;
+      }
+      
+      localStorage.setItem(username, password);
+      
+      // Show success message with fade
+      const formContainer = document.querySelector(".form-container");
+      const successMsg = document.createElement("div");
+      successMsg.innerHTML = `
+        <div style="position: absolute; top: 0; left: 0; right: 0; text-align: center; background-color: #4CAF50; color: white; padding: 1rem; border-radius: 5px; transform: translateY(-10px); opacity: 0; transition: all 0.5s ease;">
+          <i class="fas fa-check-circle"></i> Registered successfully!
+        </div>
+      `;
+      formContainer.appendChild(successMsg);
+      
+      setTimeout(() => {
+        successMsg.firstElementChild.style.transform = "translateY(0)";
+        successMsg.firstElementChild.style.opacity = "1";
+      }, 10);
+      
+      setTimeout(() => {
+        successMsg.firstElementChild.style.transform = "translateY(-10px)";
+        successMsg.firstElementChild.style.opacity = "0";
+        
+        setTimeout(() => {
+          successMsg.remove();
+          switchTab('login');
+          registerForm.reset();
+        }, 500);
+      }, 2000);
+    });
+
+    loginForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const username = document.getElementById("login-username").value;
+      const password = document.getElementById("login-password").value;
+      
+      if (localStorage.getItem(username) === password) {
+        // Show success message with fade
+        const formContainer = document.querySelector(".form-container");
+        const successMsg = document.createElement("div");
+        successMsg.innerHTML = `
+          <div style="position: absolute; top: 0; left: 0; right: 0; text-align: center; background-color: #4CAF50; color: white; padding: 1rem; border-radius: 5px; transform: translateY(-10px); opacity: 0; transition: all 0.5s ease;">
+            <i class="fas fa-check-circle"></i> Login successful! Redirecting...
+          </div>
+        `;
+        formContainer.appendChild(successMsg);
+        
+        setTimeout(() => {
+          successMsg.firstElementChild.style.transform = "translateY(0)";
+          successMsg.firstElementChild.style.opacity = "1";
+        }, 10);
+        
+        setTimeout(() => {
+          window.location.href = "index.html";
+        }, 1500);
+      } else {
+        // Show error message with fade
+        const formContainer = document.querySelector(".form-container");
+        const errorMsg = document.createElement("div");
+        errorMsg.innerHTML = `
+          <div style="position: absolute; top: 0; left: 0; right: 0; text-align: center; background-color: #f44336; color: white; padding: 1rem; border-radius: 5px; transform: translateY(-10px); opacity: 0; transition: all 0.5s ease;">
+            <i class="fas fa-exclamation-circle"></i> Invalid credentials.
+          </div>
+        `;
+        formContainer.appendChild(errorMsg);
+        
+        setTimeout(() => {
+          errorMsg.firstElementChild.style.transform = "translateY(0)";
+          errorMsg.firstElementChild.style.opacity = "1";
+        }, 10);
+        
+        setTimeout(() => {
+          errorMsg.firstElementChild.style.transform = "translateY(-10px)";
+          errorMsg.firstElementChild.style.opacity = "0";
+          
+          setTimeout(() => {
+            errorMsg.remove();
+          }, 500);
+        }, 2000);
+      }
+    });
+
+    // Add input focus effects
+    const inputs = document.querySelectorAll('.form input');
+    inputs.forEach(input => {
+      input.addEventListener('focus', function() {
+        this.parentElement.querySelector('i').style.color = '#4CAF50';
+      });
+      
+      input.addEventListener('blur', function() {
+        this.parentElement.querySelector('i').style.color = '#aaa';
+      });
+    });
+  </script>
+</body>
+
+</html>

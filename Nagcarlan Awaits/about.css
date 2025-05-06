@@ -1,0 +1,159 @@
+      /* Breadcrumb Navigation */
+      .breadcrumb {
+        background-color: #f8f9fa;
+        padding: 10px 0;
+        border-bottom: 1px solid #eaeaea;
+      }
+
+      .breadcrumb ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+      }
+
+      .breadcrumb li {
+        display: inline;
+        font-size: 0.9rem;
+      }
+
+      .breadcrumb li:not(:last-child)::after {
+        content: "›";
+        margin: 0 8px;
+        color: #aaa;
+      }
+
+      .breadcrumb a {
+        color: #4a89dc;
+        text-decoration: none;
+      }
+
+      .breadcrumb a:hover {
+        text-decoration: underline;
+      }
+
+      .breadcrumb li:last-child {
+        color: #666;
+        font-weight: 500;
+      }
+
+      /* About Hero Section */
+      .about-hero {
+        background: url('login-main.jpg') center/cover no-repeat;
+        color: #fff;
+        padding: 100px 0;
+        text-align: center;
+        position: relative;
+      }
+
+      .about-hero::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 0;
+      }
+
+      .about-hero .hero-content {
+        position: relative;
+        z-index: 1;
+      }
+
+      .about-hero h2 {
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .about-hero p {
+        font-size: 1.25rem;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      /* About Content Section */
+      .about-section {
+        padding: 60px 20px;
+        background-color: #fdfdfd;
+      }
+
+      .about-section h3 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+        color: #444;
+      }
+
+      .about-section p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        margin-bottom: 30px;
+        color: #555;
+      }
+
+      .about-list {
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 40px;
+      }
+
+      .about-list li {
+        margin-bottom: 15px;
+        font-size: 1.05rem;
+        display: flex;
+        align-items: center;
+        color: #333;
+      }
+
+      .about-list i {
+        color: #008080;
+        margin-right: 10px;
+        font-size: 1.2rem;
+      }
+
+      /* CTA Section */
+      .cta-section {
+        background: url('login-main.jpg') no-repeat center center;
+        background-size: cover;
+        color: white;
+        text-align: center;
+        padding: 50px 20px;
+      }
+
+      .cta-section h3 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+      }
+
+      .cta-section p {
+        font-size: 1.1rem;
+        margin-bottom: 25px;
+      }
+
+      .cta-buttons .btn {
+        background-color: #fff;
+        color: #ffffff;
+        border: none;
+        padding: 12px 25px;
+        margin: 10px;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .cta-buttons .btn:hover {
+        background-color: #e0f0f0;
+      }
+
+      .cta-buttons .btn-secondary {
+        background-color: #005e5e;
+        color: #fff;
+      }
+
+      .cta-buttons .btn-secondary:hover {
+        background-color: #004747;
+      }

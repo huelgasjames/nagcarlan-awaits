@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travel Info - Nagcarlan Awaits</title>
+  <!-- Load Font Awesome first -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Then load styles.css for shared elements like header and footer -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Finally load travel-info.css for page-specific styles that can override previous styles -->
+  <link rel="stylesheet" href="travel-info.css" />
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1>Nagcarlan Awaits</h1>
+      <button class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav id="mainNav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="attraction.html">Attractions</a></li>
+          <li><a href="food-index.html">Food</a></li>
+          <li><a href="accommodation.html">Stay</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html"><i class="fas fa-user"></i> Logout</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="travel-hero">
+    <div class="hero-content">
+      <h2>Travel Information</h2>
+      <p>Help us help you plan a smooth trip to Nagcarlan!</p>
+    </div>
+  </section>
+
+  <section class="travel-form-section">
+    <div class="container">
+      <h3>Request Travel Info</h3>
+      <form class="travel-form" id="travelForm">
+        <div class="form-group">
+          <label for="fullname">Full Name:</label>
+          <input type="text" id="fullname" name="fullname" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="arrival">Expected Arrival Date:</label>
+          <input type="date" id="arrival" name="arrival">
+        </div>
+        <div class="form-group">
+          <label for="interests">What are you interested in?</label>
+          <textarea id="interests" name="interests" rows="4" placeholder="E.g. waterfalls, local food, heritage sites..."></textarea>
+        </div>
+        <button type="submit" class="btn">Submit Request</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About Us</h3>
+          <p>Nagcarlan Tourism Office is dedicated to promoting the rich heritage, natural beauty, and cultural experiences of Nagcarlan, Laguna.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="attraction.html">Attractions</a></li>
+            <li><a href="food-index.html">Food</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Information</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Municipal Tourism Office, Nagcarlan, Laguna</p>
+          <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+          <p><i class="fas fa-envelope"></i> info@nagcarlan.gov.ph</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="copy-right">
+        <p>&copy; 2025 Nagcarlan Tourism. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+    
+    menuToggle.addEventListener('click', () => {
+      mainNav.classList.toggle('active');
+      menuToggle.innerHTML = mainNav.classList.contains('active') 
+        ? '<i class="fas fa-times"></i>' 
+        : '<i class="fas fa-bars"></i>';
+    });
+    
+    // Close menu on scroll
+    window.addEventListener('scroll', function() {
+      if (mainNav.classList.contains('active')) {
+        mainNav.classList.remove('active');
+        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+      }
+    }, false);
+    
+    // Form submission
+    const travelForm = document.getElementById('travelForm');
+    
+    travelForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Create success message element
+      const successMessage = document.createElement('div');
+      successMessage.style = `
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #4CAF50;
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 5px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        z-index: 1000;
+        opacity: 0;
+        transition: all 0.5s ease;
+      `;
+      successMessage.innerHTML = '<i class="fas fa-check-circle"></i> Request submitted successfully! We\'ll be in touch soon.';
+      
+      document.body.appendChild(successMessage);
+      
+      // Show the message with animation
+      setTimeout(() => {
+        successMessage.style.opacity = '1';
+        successMessage.style.transform = 'translateX(-50%) translateY(10px)';
+      }, 10);
+      
+      // Remove message after delay
+      setTimeout(() => {
+        successMessage.style.opacity = '0';
+        successMessage.style.transform = 'translateX(-50%) translateY(-20px)';
+        
+        setTimeout(() => {
+          document.body.removeChild(successMessage);
+        }, 500);
+        
+        // Reset form
+        travelForm.reset();
+      }, 3000);
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+/* Breadcrumb Navigation */
+.breadcrumb {
+  background-color: #f8f9fa;
+  padding: 10px 0;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.breadcrumb ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumb li {
+  display: inline;
+  font-size: 0.9rem;
+}
+
+.breadcrumb li:not(:last-child)::after {
+  content: "›";
+  margin: 0 8px;
+  color: #aaa;
+}
+
+.breadcrumb a {
+  color: #4a89dc;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb li:last-child {
+  color: #666;
+  font-weight: 500;
+}
+
+/* Contact Hero Section */
+.contact-hero {
+  background: url('login-main.jpg') no-repeat center center/cover;
+  padding: 80px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.contact-hero .hero-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contact-hero h2 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.contact-hero p {
+  font-size: 1.2rem;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+.contact-form-section .container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.contact-form-section h3 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.contact-form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form .btn {
+  background-color: #00704a;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form .btn:hover {
+  background-color: #005f3c;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .contact-form {
+    padding: 20px;
+  }
+
+  .contact-hero h2 {
+    font-size: 2.2rem;
+  }
+
+  .contact-hero p {
+    font-size: 1rem;
+  }
+}

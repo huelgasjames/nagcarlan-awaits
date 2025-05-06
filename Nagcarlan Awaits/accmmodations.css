@@ -1,0 +1,331 @@
+    /* Accommodation-specific styles */
+    .accommodation-hero {
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      margin-bottom: 2rem;
+      transition: background-image 1s ease-in-out;
+    }
+
+    .accommodation-hero-content {
+      max-width: 800px;
+      padding: 0 20px;
+    }
+
+    .accommodation-hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .accommodation-hero p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .accommodation-filters {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 2rem;
+    }
+
+    .filter-btn {
+      background-color: #f8f8f8;
+      border: 2px solid #e0e0e0;
+      padding: 10px 20px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 600;
+    }
+
+    .filter-btn:hover, .filter-btn.active {
+      background-color: #558b2f;
+      color: white;
+      border-color: #558b2f;
+    }
+
+    .price-range {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 2rem;
+    }
+
+    .price-range label {
+      font-weight: 600;
+    }
+
+    .price-range input {
+      width: 200px;
+    }
+
+    .price-value {
+      font-weight: 600;
+      color: #558b2f;
+    }
+
+    .accommodations-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 25px;
+      margin-bottom: 3rem;
+    }
+
+    .accommodation-card {
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      background-color: white;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .accommodation-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .accommodation-img-container {
+      height: 220px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .accommodation-img-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .accommodation-card:hover .accommodation-img-container img {
+      transform: scale(1.1);
+    }
+
+    .accommodation-badge {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background-color: #ff6b6b;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .accommodation-badge.popular {
+      background-color: #ff6b6b;
+    }
+
+    .accommodation-badge.new {
+      background-color: #4ecdc4;
+    }
+
+    .accommodation-badge.deal {
+      background-color: #ffd166;
+      color: #333;
+    }
+
+    .accommodation-content {
+      padding: 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .accommodation-content h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .accommodation-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .accommodation-rating {
+      color: #ffa000;
+    }
+
+    .accommodation-price {
+      font-weight: 600;
+      color: #558b2f;
+      font-size: 1.1rem;
+    }
+
+    .accommodation-features {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+      flex-wrap: wrap;
+    }
+
+    .accommodation-feature {
+      display: flex;
+      align-items: center;
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    .accommodation-feature i {
+      margin-right: 5px;
+      color: #558b2f;
+    }
+
+    .accommodation-description {
+      margin-bottom: 15px;
+      color: #666;
+      flex-grow: 1;
+    }
+
+    .accommodation-buttons {
+      display: flex;
+      gap: 10px;
+      margin-top: auto;
+    }
+
+    .view-btn {
+      flex: 1;
+      text-align: center;
+      padding: 10px;
+      border-radius: 5px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .view-btn.primary {
+      background-color: #558b2f;
+      color: white;
+    }
+
+    .view-btn.secondary {
+      background-color: white;
+      color: #558b2f;
+      border: 1px solid #558b2f;
+    }
+
+    .view-btn:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
+    }
+    .map-section {
+      background: #f8f9fa;
+      padding: 2rem 0;
+    }
+    
+    .map-container {
+      height: 400px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    
+
+    .book-direct {
+      background-color: #43c24d;
+      border-radius: 10px;
+      padding: 2rem;
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+
+    .book-direct h3 {
+      color: #2e7d32;
+      margin-bottom: 1rem;
+    }
+
+    .book-direct p {
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+
+    .testimonials {
+      margin-bottom: 3rem;
+    }
+
+    .testimonial-slider {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 20px;
+      padding-bottom: 20px;
+      scrollbar-width: thin;
+    }
+
+    .testimonial-slide {
+      scroll-snap-align: start;
+      min-width: 300px;
+      max-width: 400px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+
+    .testimonial-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .testimonial-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 15px;
+    }
+
+    .testimonial-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .testimonial-info h4 {
+      margin: 0;
+      color: #333;
+    }
+
+    .testimonial-info .testimonial-location {
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    .testimonial-rating {
+      color: #ffa000;
+      margin-bottom: 10px;
+    }
+
+    .testimonial-text {
+      color: #666;
+      font-style: italic;
+    }
+
+    @media (max-width: 768px) {
+      .accommodations-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .testimonial-slider {
+        flex-direction: column;
+        gap: 15px;
+      }
+      
+      .testimonial-slide {
+        min-width: 100%;
+      }
+    }
